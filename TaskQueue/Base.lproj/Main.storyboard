@@ -13,7 +13,7 @@
         <!--TaskQueue-->
         <scene sceneID="DG9-MR-NEO">
             <objects>
-                <viewController id="47M-Sd-Bh0" customClass="ActivityViewController" sceneMemberID="viewController">
+                <viewController id="47M-Sd-Bh0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vkb-hh-5Rj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,9 @@
                     <navigationItem key="navigationItem" title="TaskQueue" id="moP-iv-tDY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OeH-VX-jpO">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="SQP-d0-MwH" kind="presentation" id="Hl6-LS-qO5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -164,7 +167,7 @@
         <!--Nova Tarefa-->
         <scene sceneID="LOj-Cv-CKV">
             <objects>
-                <viewController id="SQP-d0-MwH" sceneMemberID="viewController">
+                <viewController id="SQP-d0-MwH" customClass="NewTaskViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xcH-1S-Mp6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,14 +214,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Nova Tarefa" id="SNg-Ha-Sjb">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wc3-LC-bfM">
-                                            <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="D5l-I6-Bel">
-                                            <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Nova Tarefa" id="SNg-Ha-Sjb"/>
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-aS-AZT">
@@ -264,10 +260,17 @@
                     <navigationItem key="navigationItem" title="Nova Tarefa" id="Kqz-yJ-DzD">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="mxF-5C-Cky"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="TaskCategory" destination="5nt-mZ-uaN" id="Ic7-vf-spx"/>
+                        <outlet property="TaskDate" destination="e1D-on-gWh" id="ofx-SW-nTe"/>
+                        <outlet property="TaskDescription" destination="lgZ-aS-AZT" id="I4x-SC-bg2"/>
+                        <outlet property="TaskName" destination="oLd-Ww-WXd" id="mS8-Xc-swO"/>
+                        <outlet property="TaskPriority" destination="ioF-58-rEj" id="6gG-GC-gIM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHh-RG-aHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2814" y="-183"/>
+            <point key="canvasLocation" x="2839" y="-175"/>
         </scene>
     </scenes>
 </document>
