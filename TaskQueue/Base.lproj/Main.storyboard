@@ -83,6 +83,7 @@
                     <connections>
                         <outlet property="tableView" destination="5DP-ZL-Fm9" id="GpL-Fg-WWe"/>
                         <segue destination="SQP-d0-MwH" kind="presentation" identifier="taskSegue" id="7Pb-Hb-rbB"/>
+                        <segue destination="1bU-64-Cpf" kind="show" identifier="showTaskSegue" id="4wg-gg-rjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE4-ga-RGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,7 +97,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="nMR-Se-4sZ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="47M-Sd-Bh0" kind="relationship" relationship="rootViewController" id="4gS-jj-hao"/>
@@ -106,59 +108,44 @@
             </objects>
             <point key="canvasLocation" x="1086" y="168"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Task View Controller-->
         <scene sceneID="Nif-LF-Hhn">
             <objects>
-                <viewController id="1bU-64-Cpf" sceneMemberID="viewController">
+                <viewController id="1bU-64-Cpf" customClass="ShowTaskViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sdB-Zl-zd7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="MKN-w3-a3s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Detalhes" id="vHE-Jn-ZvT">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="eRr-3U-SRR">
-                                            <color key="tintColor" red="1" green="0.57457399368286133" blue="0.0019781978335231543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="dsM-vL-RP2">
-                                            <color key="tintColor" red="1" green="0.57457399368286133" blue="0.0019781978335231543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcj-jj-PNo">
-                                <rect key="frame" x="16" y="44" width="343" height="603"/>
+                                <rect key="frame" x="16" y="-6" width="343" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="800"/>
                                 <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DD/MM/AAAA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwT-Qk-t7P">
-                                <rect key="frame" x="99" y="183" width="177" height="39"/>
+                                <rect key="frame" x="99" y="133" width="177" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt2-Km-zGo">
-                                <rect key="frame" x="16" y="221" width="343" height="289"/>
+                                <rect key="frame" x="16" y="171" width="343" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomeTarefa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8se-Ou-ctj">
-                                <rect key="frame" x="16" y="69" width="343" height="66"/>
+                                <rect key="frame" x="16" y="19" width="343" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-9Q-HTx">
-                                <rect key="frame" x="99" y="136" width="177" height="39"/>
+                                <rect key="frame" x="99" y="86" width="177" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -168,6 +155,13 @@
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Xe5-cy-BWX"/>
                     </view>
+                    <connections>
+                        <outlet property="taskCategory" destination="Y4j-9Q-HTx" id="KaS-3j-KLG"/>
+                        <outlet property="taskDate" destination="dwT-Qk-t7P" id="MLD-7Y-n39"/>
+                        <outlet property="taskDescription" destination="Tt2-Km-zGo" id="Z5x-nR-H4S"/>
+                        <outlet property="taskName" destination="8se-Ou-ctj" id="4ka-W3-rvY"/>
+                        <outlet property="taskPriority" destination="fcj-jj-PNo" id="cmd-QN-S9H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6Q-wV-HkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NewTaskDelegate>
 
+@property id<NewTaskDelegate> delegateToShowTask;
 
 @property NSMutableArray *taskCells;
 

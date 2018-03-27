@@ -10,6 +10,7 @@
 #import "TaskTableViewCell.h"
 #import "NewTaskViewController.h"
 #import "Task.h"
+#import "ShowTaskViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -41,10 +42,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-	
-	NewTaskViewController* newTaskVC = (NewTaskViewController*)[segue destinationViewController];
-	
-	[newTaskVC setDelegate: self];
+	if([segue.identifier isEqualToString: @"taskSegue"]){
+		NewTaskViewController* newTaskVC = (NewTaskViewController*)[segue destinationViewController];
+		
+		[newTaskVC setDelegate: self];
+	}
+	if([segue.identifier isEqualToString: @"showTaskSegue"]){
+		ShowTaskViewController *showVC = (ShowTaskViewController*) [segue destinationViewController];
+		
+		showVC.taskToShow = (Task*)sender;
+	}
+
 }
 
 
@@ -69,6 +77,12 @@
 	
 	
 	return tempCell;
+}
+#pragma mark - OnCellClick
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	[self performSegueWithIdentifier:@"showTaskSegue" sender:_taskCells[indexPath.row]];
+	return nil;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

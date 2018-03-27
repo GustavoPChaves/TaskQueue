@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1EDCCC206A8C470069D5AC /* ShowTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1EDCCB206A8C470069D5AC /* ShowTaskViewController.m */; };
 		BE698A662065466F003F6490 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE698A652065466F003F6490 /* AppDelegate.m */; };
 		BE73659420693EFB0098AEB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73659320693EFB0098AEB5 /* ViewController.m */; };
 		BE9341D42061292900CED80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9341D22061292900CED80E /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		BE1EDCC8206A855F0069D5AC /* NewTaskDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTaskDelegate.h; sourceTree = "<group>"; };
+		BE1EDCCA206A8C470069D5AC /* ShowTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowTaskViewController.h; sourceTree = "<group>"; };
+		BE1EDCCB206A8C470069D5AC /* ShowTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowTaskViewController.m; sourceTree = "<group>"; };
 		BE698A652065466F003F6490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BE73659220693EFB0098AEB5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BE73659320693EFB0098AEB5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -88,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1EDCC9206A8C180069D5AC /* ShowTaskDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BE1EDCCA206A8C470069D5AC /* ShowTaskViewController.h */,
+				BE1EDCCB206A8C470069D5AC /* ShowTaskViewController.m */,
+			);
+			path = ShowTaskDetails;
+			sourceTree = "<group>";
+		};
 		BE698A622065463D003F6490 /* NewTaskView */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 		BE9341CB2061292900CED80E /* TaskQueue */ = {
 			isa = PBXGroup;
 			children = (
+				BE1EDCC9206A8C180069D5AC /* ShowTaskDetails */,
 				BED30283206934910012B676 /* Task */,
 				BED3027F206934200012B676 /* TaskViewCell */,
 				BE698A672065467E003F6490 /* ViewController */,
@@ -318,6 +331,7 @@
 				BE698A662065466F003F6490 /* AppDelegate.m in Sources */,
 				BE9341DC2061292900CED80E /* main.m in Sources */,
 				BED302772069153B0012B676 /* NewTaskViewController.m in Sources */,
+				BE1EDCCC206A8C470069D5AC /* ShowTaskViewController.m in Sources */,
 				BED30286206934A00012B676 /* Task.m in Sources */,
 				BED30282206934450012B676 /* TaskTableViewCell.m in Sources */,
 			);
