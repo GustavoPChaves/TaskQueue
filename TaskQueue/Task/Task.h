@@ -8,20 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Activity : NSObject
+@interface Task : NSObject
 
 #pragma mark - properties
 @property NSString *name;
 @property NSString *category;
 @property NSString *eventDescription;
-@property NSDate *deadLine;
+@property NSString *deadLine;
 @property NSString *priority;
 
 #pragma mark - constructor
 - (id) initWithName: (NSString *)name
 		andCategory: (NSString *)category
  		andEventDesciption: (NSString *)eventDesciption
-		andDeadLine: (NSDate *)deadLine
+		andDeadLine: (NSString *)deadLine
 		andpriority: (NSString *)priority;
 
 @end

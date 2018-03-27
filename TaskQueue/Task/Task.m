@@ -6,14 +6,14 @@
 //  Copyright © 2018 Academy. All rights reserved.
 //
 
-#import "Activity.h"
+#import "Task.h"
 
-@implementation Activity
+@implementation Task
 
 -(id)initWithName:(NSString *)name
 	andCategory:(NSString *)category
 	andEventDesciption:(NSString *)eventDesciption
-	andDeadLine:(NSDate *)deadLine
+	andDeadLine:(NSString *)deadLine
 	andpriority:(NSString *)priority{
 	
 	if( self = [super init] ){

@@ -6,9 +6,9 @@
 //  Copyright © 2018 Academy. All rights reserved.
 //
 
-#import "ActivityTableViewCell.h"
+#import "TaskTableViewCell.h"
 
-@implementation ActivityTableViewCell
+@implementation TaskTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

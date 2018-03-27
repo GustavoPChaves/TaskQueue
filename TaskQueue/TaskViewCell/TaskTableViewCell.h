@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityTableViewCell : UITableViewCell
+@interface TaskTableViewCell : UITableViewCell
 
 #pragma mark -  Properties
 

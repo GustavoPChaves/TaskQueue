@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE698A5F2065460D003F6490 /* Activity in Resources */ = {isa = PBXBuildFile; fileRef = BE698A5E2065460D003F6490 /* Activity */; };
-		BE698A6120654616003F6490 /* ActivityViewCell in Resources */ = {isa = PBXBuildFile; fileRef = BE698A6020654616003F6490 /* ActivityViewCell */; };
 		BE698A662065466F003F6490 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE698A652065466F003F6490 /* AppDelegate.m */; };
+		BE73659420693EFB0098AEB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73659320693EFB0098AEB5 /* ViewController.m */; };
 		BE9341D42061292900CED80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9341D22061292900CED80E /* Main.storyboard */; };
 		BE9341D62061292900CED80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9341D52061292900CED80E /* Assets.xcassets */; };
 		BE9341D92061292900CED80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9341D72061292900CED80E /* LaunchScreen.storyboard */; };
 		BE9341DC2061292900CED80E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9341DB2061292900CED80E /* main.m */; };
 		BE9341E62061292900CED80E /* TaskQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9341E52061292900CED80E /* TaskQueueTests.m */; };
 		BE9341F12061292900CED80E /* TaskQueueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9341F02061292900CED80E /* TaskQueueUITests.m */; };
+		BED302772069153B0012B676 /* NewTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED302762069153B0012B676 /* NewTaskViewController.m */; };
+		BED30282206934450012B676 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED30281206934450012B676 /* TaskTableViewCell.m */; };
+		BED30286206934A00012B676 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BED30284206934A00012B676 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE698A5E2065460D003F6490 /* Activity */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Activity; sourceTree = "<group>"; };
-		BE698A6020654616003F6490 /* ActivityViewCell */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ActivityViewCell; sourceTree = "<group>"; };
-		BE698A632065463D003F6490 /* NewTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTaskViewController.h; sourceTree = "<group>"; };
-		BE698A642065463D003F6490 /* NewTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTaskViewController.m; sourceTree = "<group>"; };
+		BE1EDCC8206A855F0069D5AC /* NewTaskDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTaskDelegate.h; sourceTree = "<group>"; };
 		BE698A652065466F003F6490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE698A682065467E003F6490 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BE698A692065467E003F6490 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE73659220693EFB0098AEB5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE73659320693EFB0098AEB5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BE9341C92061292900CED80E /* TaskQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9341CC2061292900CED80E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE9341D32061292900CED80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +55,12 @@
 		BE9341EC2061292900CED80E /* TaskQueueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskQueueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9341F02061292900CED80E /* TaskQueueUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskQueueUITests.m; sourceTree = "<group>"; };
 		BE9341F22061292900CED80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED302752069153B0012B676 /* NewTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTaskViewController.h; sourceTree = "<group>"; };
+		BED302762069153B0012B676 /* NewTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTaskViewController.m; sourceTree = "<group>"; };
+		BED30280206934450012B676 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		BED30281206934450012B676 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		BED30284206934A00012B676 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		BED30285206934A00012B676 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,20 +88,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE698A622065463D003F6490 /* NewTaskViewC */ = {
+		BE698A622065463D003F6490 /* NewTaskView */ = {
 			isa = PBXGroup;
 			children = (
-				BE698A632065463D003F6490 /* NewTaskViewController.h */,
-				BE698A642065463D003F6490 /* NewTaskViewController.m */,
+				BED302752069153B0012B676 /* NewTaskViewController.h */,
+				BED302762069153B0012B676 /* NewTaskViewController.m */,
+				BE1EDCC8206A855F0069D5AC /* NewTaskDelegate.h */,
 			);
-			path = NewTaskViewC;
+			path = NewTaskView;
 			sourceTree = "<group>";
 		};
 		BE698A672065467E003F6490 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BE698A682065467E003F6490 /* ViewController.h */,
-				BE698A692065467E003F6490 /* ViewController.m */,
+				BE73659220693EFB0098AEB5 /* ViewController.h */,
+				BE73659320693EFB0098AEB5 /* ViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -124,14 +130,14 @@
 		BE9341CB2061292900CED80E /* TaskQueue */ = {
 			isa = PBXGroup;
 			children = (
+				BED30283206934910012B676 /* Task */,
+				BED3027F206934200012B676 /* TaskViewCell */,
 				BE698A672065467E003F6490 /* ViewController */,
-				BE698A622065463D003F6490 /* NewTaskViewC */,
+				BE698A622065463D003F6490 /* NewTaskView */,
 				BE9341CC2061292900CED80E /* AppDelegate.h */,
 				BE698A652065466F003F6490 /* AppDelegate.m */,
-				BE698A6020654616003F6490 /* ActivityViewCell */,
-				BE698A5E2065460D003F6490 /* Activity */,
-				BE9341D22061292900CED80E /* Main.storyboard */,
 				BE9341D52061292900CED80E /* Assets.xcassets */,
+				BE9341D22061292900CED80E /* Main.storyboard */,
 				BE9341D72061292900CED80E /* LaunchScreen.storyboard */,
 				BE9341DA2061292900CED80E /* Info.plist */,
 				BE9341DB2061292900CED80E /* main.m */,
@@ -155,6 +161,24 @@
 				BE9341F22061292900CED80E /* Info.plist */,
 			);
 			path = TaskQueueUITests;
+			sourceTree = "<group>";
+		};
+		BED3027F206934200012B676 /* TaskViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BED30280206934450012B676 /* TaskTableViewCell.h */,
+				BED30281206934450012B676 /* TaskTableViewCell.m */,
+			);
+			path = TaskViewCell;
+			sourceTree = "<group>";
+		};
+		BED30283206934910012B676 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				BED30285206934A00012B676 /* Task.h */,
+				BED30284206934A00012B676 /* Task.m */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,10 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9341D92061292900CED80E /* LaunchScreen.storyboard in Resources */,
-				BE698A5F2065460D003F6490 /* Activity in Resources */,
 				BE9341D62061292900CED80E /* Assets.xcassets in Resources */,
 				BE9341D42061292900CED80E /* Main.storyboard in Resources */,
-				BE698A6120654616003F6490 /* ActivityViewCell in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE73659420693EFB0098AEB5 /* ViewController.m in Sources */,
 				BE698A662065466F003F6490 /* AppDelegate.m in Sources */,
 				BE9341DC2061292900CED80E /* main.m in Sources */,
+				BED302772069153B0012B676 /* NewTaskViewController.m in Sources */,
+				BED30286206934A00012B676 /* Task.m in Sources */,
+				BED30282206934450012B676 /* TaskTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
