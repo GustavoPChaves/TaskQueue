@@ -10,7 +10,7 @@
 #import "ViewController.h"
 #import "NewTaskDelegate.h"
 
-@interface NewTaskViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface NewTaskViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 @property (strong, nonatomic) NSArray *priority;
 @property id<NewTaskDelegate> delegate;
 @end

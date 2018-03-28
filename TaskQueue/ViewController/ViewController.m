@@ -100,8 +100,20 @@
 	
 	
 	[_taskCells addObject:task];
+	
+	[self orderArray: _taskCells];
+	
 	[_tableView reloadData];
 }
 
+
+-(void) orderArray: (NSMutableArray*) mArray{
+	NSSortDescriptor *sortDescriptor;
+	sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:YES];
+	NSArray *sortedArray = [mArray sortedArrayUsingDescriptors:@[sortDescriptor]];
+	[mArray removeAllObjects];
+	[mArray addObjectsFromArray:sortedArray];
+	
+}
 
 @end

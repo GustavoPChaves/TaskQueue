@@ -26,7 +26,11 @@
 	
 	[super viewDidLoad];
     // Do any additional setup after loading the view.
-	_priority = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+	_priority = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+	[_taskDeadline setValue:[UIColor colorWithRed:102.0/255 green:1.0 blue:1.0 alpha:1.0] forKey:@"textColor"];
+	_taskName.delegate = self;
+	_taskCategory.delegate = self;
+	_taskDescription.delegate = self;
 
 }
 
@@ -35,6 +39,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	[[self view] endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 
@@ -45,6 +52,20 @@
 }
 */
 
+#pragma mark - TextKeyboard
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+	return YES;
+}
+
+// It is important for you to hide the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
+
 #pragma mark ButtonEvent
 - (IBAction)cancelModal:(id)sender {
 	[self dismissViewControllerAnimated:YES completion: nil];
@@ -53,7 +74,29 @@
 - (IBAction)saveModal:(id)sender {
 	
 	Task *newTask = [[Task alloc] initWithName:_taskName.text andCategory:_taskCategory.text andEventDesciption:_taskDescription.text andDeadLine: _date andpriority:_tempPriority];
+	if([newTask.name isEqualToString: @""]){
+		_taskName.placeholder = @"Digite Nome da Tarefa";
+		return;
+	}
+	if([newTask.category isEqualToString:@""]){
+		_taskCategory.placeholder = @"Digite Nome da Tarefa";
+		return;
+	}
 	
+	if(newTask.priority == nil)
+		newTask.priority = @"1";
+	if(newTask.deadLine == nil){
+		
+		
+		NSDate *tempDate = [[NSDate alloc] init];
+		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+		formatter.locale = [NSLocale localeWithLocaleIdentifier:@"pt_BR"];
+		formatter.dateFormat = @"HH:mm dd/MM";
+		formatter.timeZone = [NSTimeZone timeZoneWithName:@"Brazil/East"];
+		
+		newTask.deadLine = [formatter stringFromDate:tempDate];
+		
+	}
 	[_delegate sendData:newTask];
 	
 	//NSLog(@"Name: %@, Category: %@, Description: %@, Deadline: %@, Priority: %@.", newTask.name, newTask.category, newTask.eventDescription, newTask.deadLine, newTask.priority);
@@ -71,6 +114,7 @@
 	
 	_date = [formatter stringFromDate:dateD];
 }
+
 
 
 
@@ -93,6 +137,14 @@
 	_tempPriority = [[NSString alloc] initWithString: [_priority objectAtIndex:row]];
 }
 
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+	NSString *title = [_priority objectAtIndex:row];
+	NSAttributedString *attString =
+	[[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:102.0/255 green:1.0 blue:1.0 alpha:1.0]}];
+	
+	return attString;
+}
 
 
 
